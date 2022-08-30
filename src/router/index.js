@@ -10,8 +10,10 @@ import RemoveCert from '@/components/RemoveCert.vue'
 import NavFeature from '@/components/NavFeature.vue'
 import UpdateCert from '@/components/UpdateCert.vue'
 import viewAllCert from '@/components/viewAllCert.vue'
-import CertDownload from '@/components/CertDownload.vue'
+// import CertDownload from '@/components/CertDownload.vue'
 import verifyCert from '@/components/verifyCert.vue'
+// import gainId from '@/components/gainId.vue'
+
 
 // import Contact from '../components/Contact';
 
@@ -19,7 +21,7 @@ import verifyCert from '@/components/verifyCert.vue'
 
 // import { isAuthenticated } from '@/services/auth';
 
-const roles = {
+const meta = {
     authorize: [ 'admin', 'student' ]
 };
 
@@ -27,11 +29,10 @@ const router = new Router({
     mode:'history',
     routes:[
     //      {
-    //     path: '/',
-    //     name: 'NavBar',
-    //     component: NavBar
+    //     path: '/id',
+    //     name: 'gainId',
+    //     component: gainId
     // },    
-//     },
       
 {
         path: '/userLogin',
@@ -47,7 +48,7 @@ const router = new Router({
         path: '/verify',
         name:'verifyCert',
         component: verifyCert,
-        roles
+        meta
     },
     {
         path: '/admin',
@@ -59,7 +60,7 @@ const router = new Router({
         path: '/remove',
         name: 'Remove',
         component: RemoveCert,
-        roles: {
+        meta: {
             authorize: [ 'admin' ]
         }
     },
@@ -67,7 +68,7 @@ const router = new Router({
         path: '/viewAll',
         name: 'viewAllCert',
         component: viewAllCert,
-        roles: {
+        meta: {
             authorize: [ 'admin' ]
         }
     },
@@ -75,7 +76,7 @@ const router = new Router({
         path: '/feature',
         name: 'NavFeature',
         component:NavFeature,
-        roles: {
+        meta: {
             authorize: [ 'admin' ]
         }
     },
@@ -83,16 +84,16 @@ const router = new Router({
         path: '/update',
         name: 'UpdateCert',
         component: UpdateCert,
-        roles: {
+        meta: {
             authorize: [ 'admin' ]
         }
     },
-    {
-        path: '/download',
-        name: 'CertDownload',
-        component: CertDownload,
-        roles
-    },
+    // {
+    //     path: '/download',
+    //     name: 'CertDownload',
+    //     component: CertDownload,
+    //     meta
+    // },
     
 
      ]

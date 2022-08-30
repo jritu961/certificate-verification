@@ -10,7 +10,8 @@
         <div><input type="text" placeholder="Course" v-model="course" /></div>
         <div><input type="text" placeholder="Email" v-model="email" /></div>
         <div><input type="text" placeholder="Roll No" v-model="rollNo" /></div>
-        <div><button v-on:click="updateCert()">Update</button></div>
+        <div><button v-on:click="updateCert()">Update</button>
+</div>
       </div>
     </div>
   </div>

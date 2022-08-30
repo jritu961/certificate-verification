@@ -15,7 +15,7 @@
       <div id="date">
         <h4>{{user.date}}</h4>
         <h6>-------------------------</h6>
-        <h5>Date & Time</h5>
+        <h5>Date</h5>
       </div>
       <div id="sign">
         <img id="sign_pic" src="./sign.png" alt="Sign">
@@ -84,11 +84,7 @@ export default {
   },
 // },
 //}
-
-
-
-    
-  methods: {
+methods: {
       async generatePDF() {
       document.getElementById("downloadButton").innerHTML =
         "Currently downloading, please wait";
@@ -99,7 +95,7 @@ export default {
         allowTaint: true,
         useCORS: true,
         width: 950,
-      }).then((canvas) => {
+      }).then((canvas ) => {
         doc.addImage(canvas.toDataURL("image/png"), "PNG", 5, 5, 850, 600);
       });
       doc.save("Document.pdf");

@@ -14,9 +14,19 @@
           <h2>Sign In</h2>
             <div>Use Your Account</div>
         <div class="login">
+          <div>
+          <div>
          <input type="email" placeholder="Enter Email" v-model="email" />
+         </div>
+          <div>
          <input type="password"  placeholder="Enter Password" v-model="password"/>
-          <button v-show="false" class="invert" id="signIn" @click="login()">Sign In </button>
+         </div>
+         <div>
+          <button  class="invert" id="signIn" @click="login()">Sign In </button>
+          <div ></div>
+          
+         </div>
+         </div>
          </div>
         </div>
         </div>
@@ -38,7 +48,10 @@ export default {
     };
   },
   methods: {
+   
+    
     async login() {
+        
         const data= {
           email:this.email,
           password:this.password,
@@ -46,22 +59,30 @@ export default {
         }
         const req = {
             method: 'post',
-            url: `http://localhost:5000/api/login`,
+            url: `https://public-verify-certificate.herokuapp.com/api/login`,
              data
            ,
         };
         try {
             const res=await axios(req);
+            console.log(res.data.data.roles)
+            if(res.data.data.roles==="student"){
+              alert("Plesae Login To Student Portal")
+    this.$router.push({ name:'userLogin' });
+            }
+            else{
             localStorage.setItem('token',res.data.data.token)
-            
-            
-
-
-            // localStorage.setItem( "role", res.data.data.roles );
-            
-                    this.$router.push({ name:'UpdateCert' });
+             localStorage.setItem( "roles", res.data.data.roles );
+             
+            this.$router.push({ name:'UpdateCert' });
             console.log(res.data)
             return res.data;
+            
+        }
+            
+
+        
+            
             
         } catch (error) {
             console.log(error);
