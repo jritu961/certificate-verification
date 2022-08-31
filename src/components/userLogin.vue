@@ -60,7 +60,7 @@ export default {
         }
         const req = {
             method: 'post',
-            url: `http://localhost:5000/api/login`,
+            url: `https://public-verify-certificate.herokuapp.com/api/login`,
              data
            ,
         };
@@ -68,6 +68,7 @@ export default {
             const res=await axios(req);
             localStorage.setItem('token',res.data.data.token)
             localStorage.setItem('id',res.data.data._id)
+             localStorage.setItem('roles',res.data.data.roles)
                     this.$router.push({ name:'Public' });
             console.log(res.data)
             return res.data;

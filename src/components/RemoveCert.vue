@@ -30,7 +30,7 @@ export default {
       
       const req = {
             method: 'delete',
-            url: `http://localhost:5000/api/student/${this.id}`,
+            url: `https://public-verify-certificate.herokuapp.com/api/student/${this.id}`,
             headers: {
                 Authorization: localStorage.getItem('token'),
                

@@ -43,7 +43,7 @@ export default {
   async mounted() {
     const req = {
             method: 'get',
-            url: `http://localhost:5000/api/student`,
+            url: `https://public-verify-certificate.herokuapp.com/api/student`,
             
             headers: {
                 Authorization: localStorage.getItem('token'),

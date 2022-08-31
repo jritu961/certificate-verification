@@ -44,7 +44,7 @@ export default {
         const req = {
            
             method: 'patch',
-            url: `http://localhost:5000/api/student/${this.email}`,
+            url: `https://public-verify-certificate.herokuapp.com/api/student/${this.email}`,
              data:{
             name: this.name,
             course: this.course,
