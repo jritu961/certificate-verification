@@ -5,7 +5,7 @@
   <div class="overlay-container">
     <div class="overlay">
       <div class="overlay-right">
-        <h2>Welcome Back!</h2>
+        <h2>Welcome Back Tutor!</h2>
         <p>Please Login with your Personal info</p>
         </div>
       </div>
