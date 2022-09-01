@@ -2,6 +2,8 @@
   <div class="page">
     <NavBar />
     <div class="public">
+    
+
       <div id="public_text">
         <img
         id="logo"
@@ -19,6 +21,9 @@
       </div>
       <div id="public_search">
         <div class="search">
+            <!-- <div class="alert " role="alert">
+  A simple success alert—check it out!
+</div> -->
           <h2>Verify Certificates Here</h2>
           <div>
             <input
@@ -52,12 +57,11 @@ export default {
   },
   data() {
     return {
-      certId: "",
+      certId:localStorage.getItem("id"),
     };
   },
   methods: {
-    
-      async search() {
+    async search() {
         const id=this.certId
         const req = {
             method: 'get',
