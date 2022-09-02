@@ -37,7 +37,7 @@
         alt="image"
       />
       
-        <router-link to="/admin"><a >Tutor's Corner</a></router-link>
+        <router-link to="/admin"><a >Tutor's</a></router-link>
       </div>
       <div class="sec">
          <img
@@ -49,7 +49,7 @@
        
       />
       
-         <router-link to="/userLogin"><a>User Login</a></router-link>
+         <router-link to="/userLogin"><a>Login</a></router-link>
         </div>
               <div class="sec">
          <img
