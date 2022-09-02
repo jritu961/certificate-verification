@@ -84,7 +84,7 @@ export default {
      async register() {
       event.preventDefault()
         console.warn("userRegister",this.name,this.email,this.password)
-        // const data= {
+       // const data= {
         //   email:this.email,
         //   password:this.password,
           
@@ -114,7 +114,7 @@ export default {
              localStorage.setItem('roles',res.data.data.roles)
              alert("Registered Successful")
             //  alert(res.data.data._id)
-                    this.$router.push({ name:'LandingPaage' });
+                    this.$router.push({ name:'LandingPage' });
             console.log(res.data)
             return res.data;
       
