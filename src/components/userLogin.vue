@@ -11,8 +11,8 @@
       </div>
 </div> 
   <div class="sign-in" >
-          <h2>Sign In</h2>
-            <div>Use Your Account</div>
+          <!-- <h2>Sign In</h2>
+            <div>Use Your Account</div> -->
         <div class="login">
           <div>
           <div>
@@ -49,7 +49,6 @@ export default {
   },
   methods: {
    
-    
     async login() {
         
         const data= {
@@ -60,8 +59,9 @@ export default {
         const req = {
             method: 'post',
             url: `https://public-verify-certificate.herokuapp.com/api/login`,
-             data
-           ,
+             data,
+             
+           
         };
         try {
             const res=await axios(req);
@@ -69,6 +69,7 @@ export default {
               localStorage.setItem('token',res.data.data.token)
             localStorage.setItem('id',res.data.data._id)
              localStorage.setItem('roles',res.data.data.roles)
+            //  alert(res.data.data._id)
                     this.$router.push({ name:'Public' });
             console.log(res.data)
             return res.data;
@@ -156,7 +157,7 @@ transition: transform .5s ease-in-out;
    justify-content:space-around;
    flex-direction:column;
    padding:70px 40px;
-   width:calc(70% - 10px);
+   width:calc(60% - 10px);
    height:calc(100% - 140px);
    text-align:center;
 

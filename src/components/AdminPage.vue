@@ -11,8 +11,8 @@
       </div>
 </div> 
   <div class="sign-in" >
-          <h2>Sign In</h2>
-            <div>Use Your Account</div>
+          <!-- <h2>Sign In</h2>
+            <div>Use Your Account</div> -->
         <div class="login">
           <div>
           <div>
@@ -110,7 +110,7 @@ export default {
   background:linear-gradient(to bottom,#efefef,#ccc);
 
 }
-.overlay-container{
+/* .overlay-container{
   position:absolute;
   top:0;
   left:50%;
@@ -120,7 +120,7 @@ height:100%;
 overflow:hidden;
 transition: transform .5s ease-in-out;
   z-index:100;
-}
+} */
 
 .overlay{
   position:absolute;  
@@ -136,7 +136,7 @@ transition: transform .5s ease-in-out;
  
  
    
-  .overlay-left{
+  /* .overlay-left{
     position:absolute;
     top:0;
     left:0;
@@ -151,7 +151,7 @@ transition: transform .5s ease-in-out;
    text-align:center;
 
 
-  }
+  } */
 
 .overlay-right{
    position:absolute;
@@ -163,7 +163,7 @@ transition: transform .5s ease-in-out;
    justify-content:space-around;
    flex-direction:column;
    padding:70px 40px;
-   width:calc(70% - 10px);
+   width:calc(60% - 10px);
    height:calc(100% - 140px);
    text-align:center;
 
@@ -183,67 +183,9 @@ button{
 
   transition:transform .1s ease-in;
 
-  /* &:active{
-  transform: scale(.9);
-  }
-
-  &:focus{
-  outline:none;
-  } */
-}
- /* button.invert {
-  background-color: #fff;
-} */
-/* form{
   
-
-   } */ 
-
-   /* i
-   
-   
-   
-   */
-/* }  */
-
-/* .sign-in{
-  left:0;
-  z-index:2;
 }
-.sign-up{
-  left:0;
-  z-index:1;
-  opacity:0;
-} */
-/* .sign-up-active{ */
-
-  /* .sign-in{
-    transform:translateX(100%);
-    opacity:1;
-    z-index:5;
-    animation:show .5s
-    }
-
-  .sign-up{
-    transform:translatex(100%);
-    opacity:1;
-    z-index:5;
-  } */
-/* } */
-
-/* .overlay-container{
-  transform:translateX(-100%)
-}
-.overlay{
-  transform:translateX(50%);
-
-} */
-/* .overlay-left{
-  transform: translateX(0);
-}
-.overlay-right{
-  transform:translateX(20%);
-} */
+ 
 
 @keyframes show{
   0%{

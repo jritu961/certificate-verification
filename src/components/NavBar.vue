@@ -24,7 +24,7 @@
         alt="image"
       />
       
-        <router-link to="/" action="_blank"><a >Verify Fynd Certificate</a></router-link>
+        <router-link to="/public" action="_blank"><a >Verify Fynd Certificate</a></router-link>
       </div>
       <div id="n_deadspace"></div>
     <div id="n_deadspace"></div>
@@ -35,8 +35,6 @@
         id="Tutorlogo"
         src="https://www.clipartkey.com/mpngs/m/112-1126583_clipart-teacher-tutoring-unique-services-logo.png"
         alt="image"
-      
-       
       />
       
         <router-link to="/admin"><a >Tutor's Corner</a></router-link>
@@ -53,6 +51,31 @@
       
          <router-link to="/userLogin"><a>User Login</a></router-link>
         </div>
+              <div class="sec">
+         <img
+        
+        id="contact"
+        src=""
+        alt=""
+      
+       
+      />
+      
+         <router-link to="/contact"><a>Contact Us</a></router-link>
+        </div>
+                      <div class="sec">
+         <img
+        
+        id="contact"
+        src=""
+        alt=""
+      
+       
+      />
+      
+         <router-link to="/register"><a>Sign Up</a></router-link>
+        </div>
+        
     </div>
   </div>
 </template>

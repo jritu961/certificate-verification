@@ -10,10 +10,10 @@ import RemoveCert from '@/components/RemoveCert.vue'
 import NavFeature from '@/components/NavFeature.vue'
 import UpdateCert from '@/components/UpdateCert.vue'
 import viewAllCert from '@/components/viewAllCert.vue'
-// import CertDownload from '@/components/CertDownload.vue'
+import LandingPage from '@/components/LandingPage.vue'
 import verifyCert from '@/components/verifyCert.vue'
-// import gainId from '@/components/gainId.vue'
-
+import userRegister from '@/components/userRegister.vue'
+import contactPage from '@/components/contactPage.vue' 
 
 // import Contact from '../components/Contact';
 
@@ -28,11 +28,11 @@ const meta = {
 const router = new Router({
     mode:'history',
     routes:[
-    //      {
-    //     path: '/id',
-    //     name: 'gainId',
-    //     component: gainId
-    // },    
+         {
+        path: '/',
+        name: 'LandingPage',
+        component: LandingPage
+    },    
       
 {
         path: '/userLogin',
@@ -40,9 +40,14 @@ const router = new Router({
         component: userLogin
     },
     {
-        path: '/',
+        path: '/public',
         name: 'Public',
         component: PublicPage
+    },
+    {
+        path: '/contact',
+        name: 'contactPage',
+        component: contactPage
     },
     {
         path: '/verify',
@@ -88,12 +93,12 @@ const router = new Router({
             authorize: [ 'admin' ]
         }
     },
-    // {
-    //     path: '/download',
-    //     name: 'CertDownload',
-    //     component: CertDownload,
-    //     meta
-    // },
+    {
+        path: '/register',
+        name: 'userRegister',
+        component: userRegister,
+        meta
+    },
     
 
      ]
