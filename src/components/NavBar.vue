@@ -24,7 +24,7 @@
         alt="image"
       />
       
-        <router-link to="/public" action="_blank"><a >Verify Certificate</a></router-link>
+        <router-link to="/public" action="_blank"><a >Verify</a></router-link>
       </div>
       <div id="n_deadspace"></div>
     <div id="n_deadspace"></div>
