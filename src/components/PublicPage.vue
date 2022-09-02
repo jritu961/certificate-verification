@@ -70,7 +70,7 @@ export default {
         const id=this.certId
         const req = {
             method: 'get',
-            url: `http://localhost:5000/api/student/${id}`,
+            url: `https://public-verify-certificate.herokuapp.com/api/student/${id}`,
             headers: {
                 Authorization: localStorage.getItem('token'),
                
