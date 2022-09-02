@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <NavBar />
+  <div v-show="course!=='undefined'">
     <div class="public">
     
 
@@ -41,8 +42,11 @@
             </button>
           </div>
         </div>
+
       </div>
     </div>
+    <div v-show="course==='undefined'">when course is not assigned</div>
+  </div>
   </div>
 </template>
 
@@ -58,6 +62,7 @@ export default {
   data() {
     return {
       certId:localStorage.getItem("id"),
+      course:localStorage.getItem("course")
     };
   },
   methods: {
@@ -73,13 +78,17 @@ export default {
             },
         };
         try {
+         
             const res=await axios(req);
-                    // localStorage.setItem("id",req.data.data.id)
+                    // localStorage.setItem("id",req.data.course)
      
             console.log(res.data)
+
+             
             this.$router.push("/verify");
             return res.data;
-            // this.$router.push("/verify");
+
+          // this.$router.push("/verify");
         } catch (error) {
             console.log(error);
             return false;

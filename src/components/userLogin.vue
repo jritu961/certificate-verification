@@ -5,7 +5,7 @@
   <div class="overlay-container">
     <div class="overlay2">
       <div class="overlay-right2">
-        <h2>Welcome Back User!</h2>
+        <h2>Welcome User!</h2>
         <p>Please Login with your Personal info</p>
         </div>
       </div>
@@ -48,7 +48,6 @@ export default {
     };
   },
   methods: {
-   
     async login() {
         
         const data= {
@@ -58,18 +57,24 @@ export default {
         }
         const req = {
             method: 'post',
-            url: `https://public-verify-certificate.herokuapp.com/api/login`,
+            url: `http://localhost:5000/api
+/login`,
              data,
              
            
         };
         try {
             const res=await axios(req);
-            console.log(res.data.data.roles)
+            console.log(res.data.data)
               localStorage.setItem('token',res.data.data.token)
             localStorage.setItem('id',res.data.data._id)
              localStorage.setItem('roles',res.data.data.roles)
+             localStorage.setItem('course',res.data.data.course)
             //  alert(res.data.data._id)
+            // if(res.data.data.course===undefined){
+              //  this.$router.push({ name:'LandingPage' });
+            // }
+
                     this.$router.push({ name:'Public' });
             console.log(res.data)
             return res.data;

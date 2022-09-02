@@ -2,7 +2,7 @@
  
   <div>
     <div id="certificate">
-        <h6 id="id">Certificate ID:{{user._id}}</h6>
+        <h6 id="id" >Certificate ID:{{user._id}}</h6>
       <div class="certificate">
         <h3>This is to certify that</h3>
         <h1>{{user.name}}</h1>
@@ -10,7 +10,8 @@
           ____________________________________________________________________________________
         </h6>
         <h3>has successfully cleared the assessment for the skill</h3>
-        <h2>{{user.course}}</h2>
+        <h2 >{{user.course}}</h2>
+         <h6>-------------------------</h6>
       </div>
       <div id="date">
         <h4>{{user.date}}</h4>
