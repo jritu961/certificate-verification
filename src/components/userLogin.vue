@@ -8,7 +8,7 @@
     <div class="overlay2">
       <div class="overlay-right2">
         <h2>Welcome User!</h2>
-        <p>Please Login with your Personal info</p>
+        <p>Please Login</p>
         </div>
       </div>
 </div> 
