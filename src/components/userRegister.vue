@@ -2,15 +2,49 @@
 <template>
    <div>
     <NavBar/>
-    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <div class="container">
+  <!-- <div v-show="course!=='undefined'"> -->
+  <div class="overlay-container">
+    <div class="overlay2">
+      <div class="overlay-right2">
+        <h2>Welcome User!</h2>
+        <p>Please Register</p>
+        </div>
+      </div>
+</div> 
+  <div class="sign-in" >
+          <!-- <h2>Sign In</h2>
+            <div>Use Your Account</div> -->
+        <div class="login">
+          <div>
+            <div>
+         <input type="text" placeholder="Name" v-model="name" />
+         </div>
+          <div>
+         <input type="email" placeholder="Enter Email" v-model="email" />
+         </div>
+          <div>
+         <input type="password"  placeholder="Enter Password" v-model="password"/>
+         </div>
+         <div>
+          <button  class="invert" id="signIn" @click="register()">Sign Up</button>
+          <div ></div>
+          </div>
+         </div>
+         </div>
+         </div>
+        <!-- </div> -->
+        <!-- <div class="b" v-show="course==='undefined'">alert('hii')</div> -->
+        </div>
+    <!-- <section class="h-100 h-custom" style="background-color: #8fc4b7;">
   <div class="container py-0 h-90">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-8 col-xl-4">
-        <div class="card rounded-3">
+        <div class="card rounded-3"> -->
           <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo"> -->
-          <div class="card-body p-3 p-md-1">
+          <!-- <div class="card-body p-3 p-md-1">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
 
             <form class="px-md-2">
@@ -60,7 +94,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
     </div> 
 </template>
 <script >
