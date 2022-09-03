@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="feat"><router-link to="/AddCert">Add a certificate</router-link></div>
+   
     <div class="feat">
       <router-link to="/remove">Delete a certificate</router-link>
     </div>
     <div class="feat">
-      <router-link to="/update">Update a certificate</router-link>
+      <router-link to="/update">Add a certificate</router-link>
     </div>
     <div class="feat">
       <router-link to="/viewAll">View issued certificates</router-link>

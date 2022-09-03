@@ -1,7 +1,9 @@
 <template>
 <div class="page">
 <NavBar/>
+
 <div class="container">
+  <!-- <div v-show="course!=='undefined'"> -->
   <div class="overlay-container">
     <div class="overlay2">
       <div class="overlay-right2">
@@ -24,11 +26,12 @@
          <div>
           <button  class="invert" id="signIn" @click="login()">Sign In </button>
           <div ></div>
-          
+          </div>
          </div>
          </div>
          </div>
-        </div>
+        <!-- </div> -->
+        <!-- <div class="b" v-show="course==='undefined'">alert('hii')</div> -->
         </div>
     </div>
 </template>
@@ -44,6 +47,7 @@ export default {
     return {
       email: "",
       password: "",
+    // course:localStorage.getItem('course')
       
     };
   },
@@ -57,7 +61,7 @@ export default {
         }
         const req = {
             method: 'post',
-            url: `https://public-verify-certificate.herokuapp.com/api
+            url: `http://localhost:5000/api
 /login`,
              data,
              
@@ -118,7 +122,10 @@ overflow:hidden;
 transition: transform .5s ease-in-out;
   z-index:100;
 }
-
+.b{
+  background-color: black;
+  height: 5cm;
+}
 .overlay2{
   position:absolute;  
   height:100%;

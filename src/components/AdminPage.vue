@@ -163,7 +163,7 @@ transition: transform .5s ease-in-out;
    justify-content:space-around;
    flex-direction:column;
    padding:70px 40px;
-   width:calc(60% - 10px);
+   width:calc(70% - 10px);
    height:calc(100% - 140px);
    text-align:center;
 

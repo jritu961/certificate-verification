@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <NavBar />
+    <LoginNavBar/>
   <div v-show="course!=='undefined'">
     <div class="public">
     
@@ -51,13 +51,13 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
+import LoginNavBar from "@/components/LoginNavBar.vue";
 // import { getCertificateById } from "@/services/certificate";
 import axios from "axios";
 export default {
   name: "PublicPage",
   components: {
-    NavBar,
+    LoginNavBar,
   },
   data() {
     return {

@@ -13,7 +13,7 @@
     
     <div id="sec">
       <div class="sec">
-        <router-link to="/AddCert">Welcome User</router-link>
+        <router-link to="/">Welcome User</router-link>
       </div>
       <div id="deadspace"></div>
       <div id="deadspace"></div>
