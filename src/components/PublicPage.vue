@@ -45,7 +45,7 @@
 
       </div>
     </div>
-    <div v-show="course==='undefined'">when course is not assigned</div>
+    <div v-show="course==='undefined'" class="noCourse"><div class="notFound">when course is not assigned</div></div>
   </div>
   </div>
 </template>
@@ -64,6 +64,12 @@ export default {
       certId:localStorage.getItem("id"),
       course:localStorage.getItem("course")
     };
+  }
+  ,
+  mounted(){
+   if(this.course==='undefined'){
+    alert("Certificate Not Generated");
+   }
   },
   methods: {
     async search() {
@@ -139,5 +145,15 @@ h1 {
  #public_search{
   width: 80vw;
 } 
+}
+.notFound{
+  margin-top: 350px;
+  font-size: 90px;
+  color: red;
+}
+.noCourse{
+  background-color: black;
+  width:100%;
+  height:500px;
 }
 </style>
