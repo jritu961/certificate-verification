@@ -101,9 +101,7 @@ export default {
  gap:1em;
  grid-template-columns: 1fr 2fr;
 }
-.content{
- 
-}
+
 .main2{
   justify-content: space-around;
   display:grid;

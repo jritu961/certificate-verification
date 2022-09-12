@@ -68,7 +68,7 @@ export default {
             console.log(res.data.data.roles)
             if(res.data.data.roles==="student"){
               alert("Plesae Login To Student Portal")
-    this.$router.push({ name:'userLogin' });
+             this.$router.push({ name:'userLogin' });
             }
             else{
             localStorage.setItem('token',res.data.data.token)
@@ -79,11 +79,6 @@ export default {
             return res.data;
             
         }
-            
-
-        
-            
-            
         } catch (error) {
             console.log(error);
             return false;

@@ -10,7 +10,6 @@
       />
     </div>
     <div id="n_deadspace"></div>
-    
     <div id="sec">
       <div class="sec">
         <router-link to="/">Welcome User</router-link>
