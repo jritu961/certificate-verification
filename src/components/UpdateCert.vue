@@ -9,7 +9,7 @@
         </div>
         <div><input type="text" placeholder="Course" v-model="course" /></div>
         <div><input type="text" placeholder="Email" v-model="email" /></div>
-        <div><input type="text" placeholder="Roll No" v-model="rollNo" /></div>
+        <div><input type="text" placeholder="Roll No" v-model="rollNumber" /></div>
         <div><button v-on:click="updateCert()">Update</button>
 </div>
       </div>
@@ -32,7 +32,7 @@ export default {
           name: "",
       course: "",
       email: "",
-      rollNo: "",
+      rollNumber: "",
       
     };
   },
@@ -48,7 +48,7 @@ export default {
              data:{
             name: this.name,
             course: this.course,
-            rollNo: this.rollNo
+            rollNumber: this.rollNumber
              },
             headers: {
                 Authorization: localStorage.getItem('token'),

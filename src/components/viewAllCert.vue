@@ -18,7 +18,7 @@
             <td>{{ item.name }}</td>
             <td>{{ item.course }}</td>
             <td>{{ item.email }}</td>
-            <td>{{ item.rollNo }}</td>
+            <td>{{ item.rollNumber }}</td>
             <td>{{ item.date }}</td>
           </tr>
         </tbody>
