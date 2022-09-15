@@ -57,7 +57,7 @@ export default {
             localStorage.setItem("user-data",req.data)
                     // localStorage.setItem("id",req.data.data.id)
             this.list = res.data.details;
-            console.log(res.data)
+            // console.log(res.data)
             
             return res.data;
             // this.$router.push("/verify");
