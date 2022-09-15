@@ -42,7 +42,7 @@ export default {
 
                     localStorage.setItem("user-info",req.data)
            alert("Certificate Deleted");
-            console.log(res.data)
+            
            
             return res.data;
             

@@ -64,7 +64,7 @@ export default {
             const res=await axios(req);
             localStorage.setItem("user-data",req.data)
              
-            // console.log(res.data)
+            
             
              
             alert("Certificate Updated");
@@ -72,7 +72,7 @@ export default {
             return res.data;
 
         } catch (error) {
-            // console.log(error);
+            console.log(error);
             return false;
         }
          
