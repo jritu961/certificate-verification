@@ -14,9 +14,11 @@
          <h6>-------------------------</h6>
       </div>
       <div id="date">
-        <h4>{{user.date}}</h4>
+
+        
+        <h5>Fynd Academy</h5>
         <h6>-------------------------</h6>
-        <h5>Date</h5>
+        
       </div>
       <div id="sign">
         <img id="sign_pic" src="./sign.png" alt="Sign">
@@ -24,28 +26,24 @@
         <h4>Director <h6>(FYND Academy)</h6></h4>
       </div>
     </div>
-    <!-- <button @click="created" id="downloadButton"
-      >Click Here to download</button
-    > -->
+    
     <button @click="generatePDF" id="downloadButton"
       >Click Here to download</button
     >
   </div>
 </template>
 <script>
+
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 import axios from "axios"
 export default {
   name: "verifyCert",
+  
   data(){
       return {
           user:{
-            // name:"Ritu",
-            // course:"Java",
-            // email:"ritu@e.com",
-            // date:"10-2-2"
-
+            
           },
       }
   },
@@ -53,8 +51,7 @@ export default {
     this.created()
 
   },
-  // ,
-  // methods:{
+
   async created(){
          const id=localStorage.getItem('id')
         
@@ -83,13 +80,12 @@ export default {
         }
     
   },
-// },
-//}
+
 methods: {
       async generatePDF() {
       document.getElementById("downloadButton").innerHTML =
         "Currently downloading, please wait";
-      //Downloading
+
       var downloading = document.getElementById("certificate");
       var doc = new jsPDF("l", "pt");
       await html2canvas(downloading, {

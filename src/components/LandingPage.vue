@@ -2,37 +2,7 @@
 <template>
     <div>
       <NavBar/>
-<!-- <div class=">
-  <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">FYND </b-navbar-brand>
-     <b-navbar-brand  href="#"><h2>Public Verify Certificate</h2></b-navbar-brand>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
-        <b-nav-item href="/register">Sign Up</b-nav-item>
-        
-        <b-nav-item href="/userLogin">Sign In</b-nav-item>
-        <b-nav-item href="/admin" >Tutor Page</b-nav-item>
-        <b-nav-item href="/contact" >Contact</b-nav-item>
-      </b-navbar-nav>
-
-       Right aligned nav items -->
-       <!-- <b-navbar-nav class="ml-auto"> -->
-         
-
-        <!-- <b-nav-item-dropdown   text="Contact Us" right>
-          <b-dropdown-item href="https://www.facebook.com/profile.php?id=100005013976325">Facebook</b-dropdown-item>
-          <b-dropdown-item href="https://www.instagram.com/ritu.nature111/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png">Instagram</b-dropdown-item>
-          <b-dropdown-item href="https://www.linkedin.com/in/ritu-jaiswal-4541851b3">Linked</b-dropdown-item>
-         </b-nav-item-dropdown> -->
-
-       
-       <!-- </b-navbar-nav>
-     </b-collapse>
-   </b-navbar>
-</div>
-   -->
  <div class="row">
             <div class="col-4 align-self-center">
               <img
@@ -87,12 +57,7 @@ export default {
   
   color: #4CAF50;
 }
-/* #Tutorlogo{
-    height: 200px;
-} */
-/* #auth{
-    height: 4cm;
-} */
+
 .main{
   align-content: center;
   justify-content: space-around;

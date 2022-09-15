@@ -11,8 +11,7 @@
       </div>
 </div> 
   <div class="sign-in" >
-          <!-- <h2>Sign In</h2>
-            <div>Use Your Account</div> -->
+  
         <div class="login">
           <div>
           <div>
@@ -65,7 +64,7 @@ export default {
         };
         try {
             const res=await axios(req);
-            console.log(res.data.data.roles)
+
             if(res.data.data.roles==="student"){
               alert("Plesae Login To Student Portal")
              this.$router.push({ name:'userLogin' });
@@ -75,7 +74,7 @@ export default {
              localStorage.setItem( "roles", res.data.data.roles );
              
             this.$router.push({ name:'UpdateCert' });
-            console.log(res.data)
+
             return res.data;
             
         }
@@ -105,17 +104,7 @@ export default {
   background:linear-gradient(to bottom,#efefef,#ccc);
 
 }
-/* .overlay-container{
-  position:absolute;
-  top:0;
-  left:50%;
-  width:100%;
 
-height:100%;
-overflow:hidden;
-transition: transform .5s ease-in-out;
-  z-index:100;
-} */
 
 .overlay{
   position:absolute;  
@@ -131,22 +120,7 @@ transition: transform .5s ease-in-out;
  
  
    
-  /* .overlay-left{
-    position:absolute;
-    top:0;
-    left:0;
-   text-emphasis-color: black;
-   display:flex;
-   align-items:center;
-   justify-content:space-around;
-   flex-direction:column;
-   padding:70px 40px;
-   width:calc(70% - 10px);
-   height:calc(100% - 140px);
-   text-align:center;
-
-
-  } */
+  
 
 .overlay-right{
    position:absolute;

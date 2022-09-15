@@ -11,7 +11,7 @@
         src="https://assets.website-files.com/603683469df97967298e6e81/62622f351b3fd01d3fc835a4_Asset%209%401.5x.png"
         alt="image"
       />
-        <!-- <a src="https://assets.website-files.com/603683469df97967298e6e81/62622f351b3fd01d3fc835a4_Asset%209%401.5x.png"></a> -->
+        
         <h1>
           Welcome to Public Verify Certificate,
           <h6>
@@ -22,9 +22,7 @@
       </div>
       <div id="public_search">
         <div class="search">
-            <!-- <div class="alert " role="alert">
-  A simple success alert—check it out!
-</div> -->
+            
           <h2>Verify Certificates Here</h2>
           <div>
             <input
@@ -52,7 +50,7 @@
 
 <script>
 import LoginNavBar from "@/components/LoginNavBar.vue";
-// import { getCertificateById } from "@/services/certificate";
+
 import axios from "axios";
 export default {
   name: "PublicPage",
@@ -86,7 +84,7 @@ export default {
         try {
          
             const res=await axios(req);
-                    // localStorage.setItem("id",req.data.course)
+                    
      
             console.log(res.data)
 
@@ -94,7 +92,7 @@ export default {
             this.$router.push("/verify");
             return res.data;
 
-          // this.$router.push("/verify");
+
         } catch (error) {
             console.log(error);
             return false;
@@ -118,7 +116,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #FDF5DF;
-  /* background:linear-gradient(to bottom,#d6d325,#bf6f96); */
+  
 }
 #submit{
   height:35px;

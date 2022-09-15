@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <LoginNavBar />
+    <LoginNavBar/>
     <div class="cert">
       <div id="ftr"><NavFeature /></div>
       <div class="form">
@@ -9,6 +9,9 @@
         </div>
         <div><input type="text" placeholder="Course" v-model="course" /></div>
         <div><input type="text" placeholder="Email" v-model="email" /></div>
+        
+        
+        
         <div><input type="text" placeholder="Roll No" v-model="rollNumber" /></div>
         <div><button v-on:click="updateCert()">Update</button>
 </div>
@@ -39,7 +42,7 @@ export default {
 
   methods: {
       async updateCert() {
-        console.warn(this.email);
+        // console.warn(this.email);
        
         const req = {
            
@@ -49,6 +52,7 @@ export default {
             name: this.name,
             course: this.course,
             rollNumber: this.rollNumber
+            
              },
             headers: {
                 Authorization: localStorage.getItem('token'),
@@ -60,35 +64,19 @@ export default {
             const res=await axios(req);
             localStorage.setItem("user-data",req.data)
              
-            console.log(res.data)
+            // console.log(res.data)
             
              
             alert("Certificate Updated");
-            // console.log(res.data)
-            // this.$router.push("ADdCert");
+            
             return res.data;
-            // this.$router.push("/verify");
+
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             return false;
         }
          
-    //   console.warn(this.email);
-    //   let result = await axios.patch(
-    //     ` http://localhost:5000/api/student/${this.email}`,
-    //     {
-    //       name: this.name,
-    //       course: this.course,
-    //       email: this.email,
-    //       rollNo: this.rollNo,
-    //     }
-    //   );
-      // console.warn(result);
-      // if (result.status == 200) {
-      //   alert("Certificate Update");
-      // }
-      // localStorage.setItem("user-info", JSON.stringify(result.data));
-      // this.$router.push({ name: "AddCert" });
+    
     },
    },
  };

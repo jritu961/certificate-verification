@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <LoginNavBar />
+    <LoginNavBar/>
     <div class="cert">
       <div id="ftr"><NavFeature /></div>
       <div class="form">
@@ -39,13 +39,13 @@ export default {
         };
         try {
             const res=await axios(req);
-            //  localStorage.setItem("user-info", result.data);
+
                     localStorage.setItem("user-info",req.data)
-     
+           alert("Certificate Deleted");
             console.log(res.data)
            
             return res.data;
-            // this.$router.push("/verify");
+            
         } catch (error) {
             console.log(error);
             return false;
@@ -53,7 +53,7 @@ export default {
     
    
 
-  //     this.$router.push({ name: "AddCert" });
+  
    },
   },
 };

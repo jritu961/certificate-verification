@@ -3,7 +3,7 @@
 <NavBar/>
 
 <div class="container">
-  <!-- <div v-show="course!=='undefined'"> -->
+  
   <div class="overlay-container">
     <div class="overlay2">
       <div class="overlay-right2">
@@ -13,8 +13,7 @@
       </div>
 </div> 
   <div class="sign-in" >
-          <!-- <h2>Sign In</h2>
-            <div>Use Your Account</div> -->
+         
         <div class="login">
           <div>
           <div>
@@ -30,8 +29,7 @@
          </div>
          </div>
          </div>
-        <!-- </div> -->
-        <!-- <div class="b" v-show="course==='undefined'">alert('hii')</div> -->
+
         </div>
     </div>
 </template>
@@ -47,7 +45,7 @@ export default {
     return {
       email: "",
       password: "",
-    // course:localStorage.getItem('course')
+    
       
     };
   },
@@ -69,18 +67,14 @@ export default {
         };
         try {
             const res=await axios(req);
-            console.log(res.data.data)
-              localStorage.setItem('token',res.data.data.token)
+            // console.log(res.data.data)
+            localStorage.setItem('token',res.data.data.token)
             localStorage.setItem('id',res.data.data._id)
-             localStorage.setItem('roles',res.data.data.roles)
-             localStorage.setItem('course',res.data.data.course)
-            //  alert(res.data.data._id)
-            // if(res.data.data.course===undefined){
-              //  this.$router.push({ name:'LandingPage' });
-            // }
-
+            localStorage.setItem('roles',res.data.data.roles)
+            localStorage.setItem('course',res.data.data.course)
+            
                     this.$router.push({ name:'Public' });
-            console.log(res.data)
+            // console.log(res.data)
             return res.data;
       
            
@@ -140,24 +134,7 @@ transition: transform .5s ease-in-out;
  
  
    
-  .overlay-left{
-    position:absolute;
-    top:0;
-    left:0;
-   
-   text-emphasis-color: black;
-   display:flex;
-   align-items:center;
-   justify-content:space-around;
-   flex-direction:column;
-   padding:70px 40px;
-   width:calc(70% - 10px);
-   height:calc(100% - 140px);
-   text-align:center;
-
-
-  }
-
+  
 .overlay-right2{
   
    position:absolute;
@@ -169,7 +146,7 @@ transition: transform .5s ease-in-out;
    justify-content:space-around;
    flex-direction:column;
    padding:70px 40px;
-   width:calc(60% - 10px);
+    width:calc(75% - 10px);
    height:calc(100% - 140px);
    text-align:center;
 
@@ -189,67 +166,8 @@ button{
 
   transition:transform .1s ease-in;
 
-  /* &:active{
-  transform: scale(.9);
-  }
-
-  &:focus{
-  outline:none;
-  } */
-}
- /* button.invert {
-  background-color: #fff;
-} */
-/* form{
   
-
-   } */ 
-
-   /* i
-   
-   
-   
-   */
-/* }  */
-
-/* .sign-in{
-  left:0;
-  z-index:2;
 }
-.sign-up{
-  left:0;
-  z-index:1;
-  opacity:0;
-} */
-/* .sign-up-active{ */
-
-  /* .sign-in{
-    transform:translateX(100%);
-    opacity:1;
-    z-index:5;
-    animation:show .5s
-    }
-
-  .sign-up{
-    transform:translatex(100%);
-    opacity:1;
-    z-index:5;
-  } */
-/* } */
-
-/* .overlay-container{
-  transform:translateX(-100%)
-}
-.overlay{
-  transform:translateX(50%);
-
-} */
-/* .overlay-left{
-  transform: translateX(0);
-}
-.overlay-right{
-  transform:translateX(20%);
-} */
 
 @keyframes show{
   0%{

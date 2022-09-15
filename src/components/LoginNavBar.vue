@@ -31,7 +31,7 @@ export default {
         logout(){
             localStorage.clear('token');
             localStorage.clear('id');
-            this.$router.push({name:'Public'})
+            this.$router.push({name:'LandingPage'})
         }
   }
  

@@ -10,7 +10,7 @@
           <th>Course</th>
           <th>Email</th>
           <th>Roll Number</th>
-          <th>date</th>
+          <!-- <th>date</th> -->
         </thead>
         <tbody>
           <tr v-for="item in list" :key="item">
@@ -19,7 +19,7 @@
             <td>{{ item.course }}</td>
             <td>{{ item.email }}</td>
             <td>{{ item.rollNumber }}</td>
-            <td>{{ item.date }}</td>
+            <!-- <td>{{ item.date }}</td> -->
           </tr>
         </tbody>
       </table>

@@ -110,13 +110,12 @@ a:active {
 }
 #navbar {
   display: flex;
-   /* background: #fff;; */
-  /* background: linear-gradient(to right,#b2fefa,#0ed2f7); */
+   
   color: rgba(9, 28, 31, 0.493);
   height: 60px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  /* background-color: #009390; */
+  
   background-color: silver;
 
 }
