@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import LoginNavBar from "@/components/LoginNavBar.vue";
+import LoginNavBar from "./LoginNavBar.vue";
 
 import axios from "axios";
 export default {

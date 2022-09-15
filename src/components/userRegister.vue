@@ -27,7 +27,7 @@
          </div>
          <div>
           <button  class="invert" id="signIn" @click="register()">Sign Up</button>
-          <div ></div>
+          
           </div>
          </div>
          </div>
