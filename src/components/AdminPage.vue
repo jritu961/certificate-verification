@@ -128,10 +128,11 @@ export default {
             const res=await axios(req);
 
             if(res.data.data.roles==="student"){
-              alert("Plesae Login To Student Portal")
+              this.$toast.error('Please Login To User Portel')
              this.$router.push({ name:'userLogin' });
             }
             else{
+              this.$toast.success('Login Successfully')
             localStorage.setItem('token',res.data.data.token)
              localStorage.setItem( "roles", res.data.data.roles );
              
@@ -142,6 +143,7 @@ export default {
         }
         } catch (error) {
             console.log(error);
+           this.$toast.error('Email or Password is invalid')
             return false;
         }
     },

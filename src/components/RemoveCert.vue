@@ -41,13 +41,14 @@ export default {
             const res=await axios(req);
 
                     localStorage.setItem("user-info",req.data)
-           alert("Certificate Deleted");
+           this.$toast.success("Certificate Deleted");
             
            
             return res.data;
             
         } catch (error) {
             console.log(error);
+            this.$toast.error("Id is Invalid");
             return false;
         }
     

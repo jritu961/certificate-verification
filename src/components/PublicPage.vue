@@ -66,7 +66,8 @@ export default {
   ,
   mounted(){
    if(this.course==='undefined'){
-    alert("Certificate Not Generated");
+    this.$toast.error('Certificate Not Generated')
+    // alert("Certificate Not Generated");
    }
   },
   methods: {
@@ -86,7 +87,7 @@ export default {
             const res=await axios(req);
                     
      
-            console.log(res.data)
+            // console.log(res.data)
 
              
             this.$router.push("/verify");

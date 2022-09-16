@@ -67,12 +67,13 @@ export default {
             
             
              
-            alert("Certificate Updated");
+            this.$toast.success("Certificate Updated");
             
             return res.data;
 
         } catch (error) {
             console.log(error);
+            this.$toast.error("Email is Invalid");
             return false;
         }
          
