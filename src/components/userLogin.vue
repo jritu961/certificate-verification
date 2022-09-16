@@ -16,14 +16,52 @@
          
         <div class="login">
           <div>
-          <div>
-         <input type="email" placeholder="Enter Email" v-model="email" />
-         </div>
-          <div>
-         <input type="password"  placeholder="Enter Password" v-model="password"/>
-         </div>
+            <div>
+                        <label for="email">Email</label>
+                    </div>
          <div>
-          <button  class="invert" id="signIn" @click="login()">Sign In </button>
+
+                        <input
+                            type="email"
+                            v-model.trim="$v.email.$model"
+                            class="input-box"
+                            placeholder="abc@example.com"
+                            :class="{ error: $v.email.$error, valid: !$v.email.$invalid }"
+                            novalidate
+                        />
+                        <transition name="bounce">
+                            <div v-if="$v.email.$error" class="errorMessage">
+                                <p v-if="!$v.email.required">Email is Required</p>
+                                <p v-else-if="$v.email.$invalid">Please enter valid email !</p>
+                            </div>
+                        </transition>
+                    </div>
+                    <div class="mt-3">
+                        <label for="password">Password</label>
+                    </div>
+                    <div>
+                        <div class="align-div">
+                            <input
+                                
+                                type="password"
+                                v-model.trim="$v.password.$model"
+                                class="input-box input-pass"
+                                id="password"
+                                placeholder="Password"
+                                :class="{ error: $v.password.$error, valid: !$v.password.$invalid }"
+                            />
+
+                            
+                        </div>
+                        <transition name="bounce">
+                            <div v-if="$v.password.$error" class="errorMessage">
+                                <p v-if="!$v.password.required">Password is Required !</p>
+                              
+                            </div>
+                        </transition>
+                    </div>
+         <div>
+          <button  class="invert" id="signIn" @click="onSubmit()">Sign In </button>
           <div ></div>
           </div>
          </div>
@@ -34,6 +72,7 @@
     </div>
 </template>
 <script>
+import { required, email, minLength } from 'vuelidate/lib/validators';
 import NavBar from "./NavBar.vue"
 import axios from "axios";
 export default {
@@ -49,6 +88,27 @@ export default {
       
     };
   },
+  validations: {
+        email: {
+            required,
+            email,
+            isUnique(value) {
+                if (value === '') return true;
+
+                //eslint-disable-next-line
+                var email_regex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,12})+$/;
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve(email_regex.test(value));
+                    }, 350 + Math.random() * 300);
+                });
+            },
+        },
+        password: {
+            required,
+            minLength: minLength(8),
+        },
+    },
   methods: {
     async login() {
         
@@ -85,7 +145,17 @@ export default {
         }
     },
 
- }, };
+onSubmit() {
+            this.$v.$touch();
+            if (this.$v.$invalid) {
+                this.submitStatus = 'FAIL';
+            } else {
+                this.submitStatus = 'SUCCESS';
+                this.login();
+            }
+        },
+ }, 
+ };
 </script>
  
 
