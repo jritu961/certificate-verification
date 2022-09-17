@@ -1,170 +1,85 @@
 <template>
-  <div id="navbar">
-    <div id="n_deadspace"></div>
-    <div>
-      <img
-        id="logo"
-        src="@/assets/Fynd.png"
-        alt="image"
-      />
-      </div>
-      <div id="n_logo">
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg nav-color">
+            <div class="container">
+                <router-link class="navbar-brand" to="/">
+                    <img src="@/assets/Fynd.png" alt="" width="25" height="30" class="d-inline-block align-text-top" />
+                    <span class="p-2 fw-bold " id="nav-link">Fynd Academy</span>
+                </router-link>
 
+                <button
+                    class="navbar-toggler bg-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <router-link to="/public" class="nav-link mx-3"><span id="nav-link">Verify </span></router-link>
+                        <router-link to="/admin" class="nav-link mx-3">
+                            <span :class="{ 'active-page': tab === 'tutor' }" id="nav-link">Tutor</span></router-link
+                        >
+                        <router-link to="/userLogin" class="nav-link mx-3"
+                            ><span :class="{ 'active-page': tab === 'userlogin' }" id="nav-link">Login </span></router-link
+                        >
+                        <router-link to="/contact" class="nav-link mx-3"
+                            ><span :class="{ 'active-page': tab === 'contact' }" id="nav-link">Contact Us</span></router-link
+                        >
+                        <router-link to="/register" class="nav-link mx-3">
+                            <span :class="{ 'active-page': tab === 'signup' }" id="nav-link">Sign Up </span>
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
-  
-    
-    <div id="n_deadspace"></div>
-    <div id="n_deadspace"></div>
-    <div id="n_deadspace"></div>
-    <div id="sec">
-      <div class="sec">
-         <img
-        id="Homelogo"
-        src="https://logodix.com/logo/1333140.png"
-        alt="image"
-      />
-      
-        <router-link to="/public" action="_blank"><a >Verify</a></router-link>
-      </div>
-      <div id="n_deadspace"></div>
-    <div id="n_deadspace"></div>
-    <div id="n_deadspace"></div>
-      <div class="sec">
-         <img
-        
-        id="Tutorlogo"
-        src="https://www.clipartkey.com/mpngs/m/112-1126583_clipart-teacher-tutoring-unique-services-logo.png"
-        alt="image"
-      />
-      
-        <router-link to="/admin"><a >Tutor's</a></router-link>
-      </div>
-      <div class="sec">
-         <img
-        
-        id="Userlogo"
-        src="https://assets.website-files.com/603683469df97967298e6e81/62622f35eec95c8a992e13be_Asset%2010%401.5x.png"
-        alt="image"
-      
-       
-      />
-      
-         <router-link to="/userLogin"><a>Login</a></router-link>
-        </div>
-              <div class="sec">
-         <img
-        
-        id="contact"
-        src=""
-        alt=""
-      
-       
-      />
-      
-         <router-link to="/contact"><a>Contact Us</a></router-link>
-        </div>
-                      <div class="sec">
-         <img
-        
-        id="contact"
-        src=""
-        alt=""
-      
-       
-      />
-      
-         <router-link to="/register"><a>Sign Up</a></router-link>
-        </div>
-        
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "NavBar",
- 
+    name: 'NavBar',
+    props: ['tab'],
 };
 </script>
 
 <style scoped>
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
+.nav-link:link {
+    color: rgb(253, 253, 253);
+    background-color: transparent;
+    text-decoration: none;
 }
-a:visited {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
+.nav-link:visited {
+    color: rgb(243, 243, 243);
+    background-color: transparent;
+    text-decoration: none;
 }
-a:hover {
-  color: #fff;
-  background-color: transparent;
-  text-decoration: underline;
+.nav-link:hover {
+    color: rgb(6, 181, 250);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
 }
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
+.nav-link:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+    background: green;
 }
-#navbar {
-  display: flex;
-   
-  color: rgba(9, 28, 31, 0.493);
-  height: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  
-  background-color: silver;
-
+.active-page {
+    background: rgba(0, 128, 0, 0.555);
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 6px 12px;
 }
-
-#n_logo,
-#sec {
-  text-decoration: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 0.5;
-  font-size:4cm;
- 
-  text-align: center;
-  margin: -0.001em;
-  
+#nav-link{
+    color: rgb(53, 51, 51);
 }
-#logo {
-  top:5px;
-  display: flex;
-  flex-grow: 0.2;
-  justify-content: center;
-  align-items: center;
-  height: 58px;
-}
-#Homelogo{
-   height:40px;
-   
-}
-#Userlogo{
-   height:40px;
-   
-}
-
-
-#Tutorlogo
-{
-   height:40px;
-   color:brown;
-   background-color: #E0730F;
-}
-.sec {
-  margin-top:200ew;;
-  top:200px;
-  flex-grow: 0.5;
-  font-size: 0.5cm;
-   
-}
-#n_deadspace {
-  width: 0.3vw;
+.nav-color{
+    background: lightgray;
 }
 </style>

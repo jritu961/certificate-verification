@@ -1,34 +1,37 @@
 <template>
-  <div>
-   
-    <div class="feat">
-      <router-link to="/remove">Delete a certificate</router-link>
+    <div class="container">
+        <div class="d-flex justify-content-evenly">
+            <button type="button" class="btn btn-danger m-3">
+                <router-link to="/remove" class="nav-link mx-3 text-light"
+                    ><span id="nav-link">Delete Certificate </span></router-link
+                >
+            </button>
+
+            <button type="button" class="btn btn-info m-3">
+                <router-link to="/update" class="nav-link mx-3 text-light"
+                    ><span id="nav-link">Add Certificate</span></router-link
+                >
+            </button>
+
+            <button type="button" class="btn btn-success m-3">
+                <router-link to="/viewAll" class="nav-link mx-3 text-light">
+                    <span id="nav-link">View All Certificate</span>
+                </router-link>
+            </button>
+        </div>
     </div>
-    <div class="feat">
-      <router-link to="/update">Add a certificate</router-link>
-    </div>
-    <div class="feat">
-      <router-link to="/viewAll">View issued certificates</router-link>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "NavFeatures",
-  components:{
-  }
-}
+    name: 'NavFeatures',
+    components: {},
+};
 </script>
 
-<style>
-.feat{
-  padding: 20px;
-  border: solid 1px rgb(234, 231, 228);
-  background-color: rgb(218, 216, 214);
-  border-radius: 10px;
-  margin:2.5px;
-  padding-left: 50px;
-  padding-right: 50px;
+<style scoped>
+.option {
+    width: 800px;
+    margin: 0 auto;
 }
 </style>

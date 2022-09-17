@@ -1,71 +1,70 @@
+<template>
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg nav-color">
+            <div class="container">
+                <router-link class="navbar-brand" to="/">
+                    <img src="@/assets/Fynd.png" alt="" width="25" height="30" class="d-inline-block align-text-top" />
+                    <span class="p-2 fw-bold" id="nav-link">Fynd Academy</span>
+                </router-link>
 
-  <template>
-  <div id="navbar">
-    <div id="deadspace"></div>
-    <div>
-      <img
-        id="logo"
-        src="@/assets/Fynd.png"
-        alt="image"
-      />
+                <form class="d-flex">
+                    <router-link to="/contact" class="nav-link mx-3"><span id="nav-link">Contact Us</span></router-link>
+                    <router-link to="/register" class="nav-link mx-3">
+                        <span id="nav-link" @click.prevent="logout()">Logout </span>
+                    </router-link>
+                </form>
+            </div>
+        </nav>
     </div>
-    <div id="n_deadspace"></div>
-    <div id="sec">
-      <div class="sec">
-        <router-link to="/">Welcome User</router-link>
-      </div>
-      <div id="deadspace"></div>
-      <div id="deadspace"></div>
-      <div id="deadspace"></div>
-      <div id="deadspace"></div>
-      <div id="deadspace"></div>
-      <div class="sec"><a v-on:click="logout()" href="#">Logout</a></div>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: ":LoginNavBar",
-  methods:{
-        logout(){
-            localStorage.clear('token');
-            localStorage.clear('id');
-            this.$router.push({name:'LandingPage'})
-        }
-  }
- 
-}
+    name: ':LoginNavBar',
+    methods: {
+        logout() {
+            this.loadScreen = this.$loading.show(this.$spinner);
+            setTimeout(() => {
+                localStorage.clear('token');
+                localStorage.clear('id');
+                this.loadScreen.hide();
+                this.$router.push({ name: 'LandingPage' });
+            }, 1000);
+        },
+    },
+};
 </script>
 
 <style scoped>
-#navbar {
-  display: flex;
-  background: rgb(235, 235, 235);
-  color: rgb(0, 0, 0);
-  height: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+.nav-link:link {
+    color: rgb(253, 253, 253);
+    background-color: transparent;
+    text-decoration: none;
 }
-#sec {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+.nav-link:visited {
+    color: rgb(243, 243, 243);
+    background-color: transparent;
+    text-decoration: none;
 }
-#deadspace{
-    width: 0.5vw;
+.nav-link:hover {
+    color: rgb(6, 181, 250);
+    background: rgba(0, 128, 0, 0.555);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 3px;
 }
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 58px;
+.nav-link:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+    background: green;
 }
-.sec {
-  font-size: 0.8em;
+
+#nav-link {
+    color: rgb(53, 51, 51);
 }
-#n_deadspace {
-  width: 78vw;
+.nav-color {
+    background: lightgray;
 }
 </style>

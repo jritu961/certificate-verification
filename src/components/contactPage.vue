@@ -1,6 +1,6 @@
 <template>
 <div >
-    <NavBar/>
+    <NavBar  tab="contact"/>
       <div>
         <div class="q_parent">
         <div id="q_text">  
