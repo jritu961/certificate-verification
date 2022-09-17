@@ -132,7 +132,7 @@ export default {
             localStorage.setItem('id',res.data.data._id)
             localStorage.setItem('roles',res.data.data.roles)
             localStorage.setItem('course',res.data.data.course)
-            
+            this.$toast.success('Successfully Login')
                     this.$router.push({ name:'Public' });
             // console.log(res.data)
             return res.data;
@@ -141,6 +141,7 @@ export default {
         }
              catch (error) {
             console.log(error);
+            this.$toast.error('Email or Password is Invalid');
             return false;
         }
     },

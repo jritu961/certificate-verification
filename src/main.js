@@ -15,10 +15,6 @@ Vue.config.productionTip = false
 Vue.use(Router)
 Vue.use(Toast, { timeout: 2000, position: POSITION.TOP_CENTER });
 
-
-
-
-
 new Vue({
   render: h => h(App),
   router
